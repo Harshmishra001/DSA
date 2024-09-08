@@ -59,3 +59,57 @@ class PowerSet {
     }
 }
 
+// Example Walkthrough:
+
+// For s = "abc":
+
+// Number of Subsets:
+
+// Length of s is 3.
+// There are 
+// 2
+// 3
+// =
+// 8
+// 2 
+// 3
+//  =8 possible subsets (including the empty subset).
+// Generate Subsets:
+
+// Iterate from i = 0 to 7 (binary 000 to 111).
+
+// i = 0 (binary 000):
+
+// Subset: (no bits set) → "" (empty string)
+// i = 1 (binary 001):
+
+// Subset: s.charAt(0) → "a"
+// i = 2 (binary 010):
+
+// Subset: s.charAt(1) → "b"
+// i = 3 (binary 011):
+
+// Subset: s.charAt(0) + s.charAt(1) → "ab"
+// i = 4 (binary 100):
+
+// Subset: s.charAt(2) → "c"
+// i = 5 (binary 101):
+
+// Subset: s.charAt(0) + s.charAt(2) → "ac"
+// i = 6 (binary 110):
+
+// Subset: s.charAt(1) + s.charAt(2) → "bc"
+// i = 7 (binary 111):
+
+// Subset: s.charAt(0) + s.charAt(1) + s.charAt(2) → "abc"
+// Non-Empty Subsets:
+
+// ["a", "ab", "b", "abc", "ac", "bc", "c"]
+// Sort Subsets:
+
+// Sorted: ["a", "ab", "abc", "ac", "b", "bc", "c"]
+// Output:
+
+// less
+// Copy code
+// All possible substrings of 'abc': [a, ab, abc, ac, b, bc, c]
