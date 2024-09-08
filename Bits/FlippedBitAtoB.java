@@ -38,3 +38,23 @@ class FlippedBitAtoB {
         // Output: 0
     }
 }
+// Test Case Walkthrough:
+
+// Test Case 1:
+
+// Inputs:
+
+// a = 29 (binary: 11101)
+// b = 15 (binary: 01111)
+// XOR Operation:
+
+// 29 ^ 15:
+// 11101
+// 01111
+// XOR Result: 10010 (binary)
+// Counting Set Bits in 10010:
+
+// 10010 has 2 set bits (1s).
+// Output:
+
+// Number of bits to flip: 2

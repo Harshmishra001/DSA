@@ -39,3 +39,63 @@ public class DivideIntegers {   //o(log(dividend))
         System.out.println("MIN_VALUE / -1 = " + divide(Integer.MIN_VALUE, -1)); // Output: Integer.MAX_VALUE
     }
 }
+
+// Test Case Walkthrough:
+
+// Example Walkthrough: 10 / 3
+
+// Initial Setup
+// Determine Sign:
+
+// Both dividend = 10 and divisor = 3 are positive.
+// Therefore, the result will be positive.
+// Convert to Absolute Values:
+
+// dividendL = 10 (absolute value of 10)
+// divisorL = 3 (absolute value of 3)
+// Initialize result = 0.
+// First Iteration
+// Find Largest Multiple of Divisor:
+
+// Initial Values:
+// tempDivisor = 3 (the divisor)
+// multiple = 1 (initial multiple of the divisor)
+// Double the Divisor:
+// Shift tempDivisor left by 1 bit (i.e., 3 << 1), resulting in 6.   (coz 3 ko ek baar shift kr re h or  multiple h so 3 * 2=6)
+// Shift multiple left by 1 bit (i.e., 1 << 1), resulting in 2.
+// Check if Multiple Fits:
+
+// Compare 10 with 6:
+// Since 10 >= 6, subtract 6 from 10, which updates dividendL to 4.
+// Add multiple (which is 2) to result, updating result to 2.
+// Update Values for Next Iteration:
+
+// dividendL = 4
+// tempDivisor = 6 (still as the largest multiple fitting in current dividendL)
+// multiple = 2
+// Second Iteration
+// Continue with Remaining Dividend:
+
+// Current Values:
+// tempDivisor = 3 (reset to original divisor)
+// multiple = 1
+// Check if tempDivisor Fits:
+// Compare 4 with 3:
+// Since 4 >= 3, subtract 3 from 4, updating dividendL to 1.
+// Add multiple (which is 1) to result, updating result to 3.
+// Update Values:
+
+// dividendL = 1
+// Since 1 is less than 3, we stop the iteration.
+// Result
+// The final value of result is 3, and since both the original dividend and divisor were positive, the result is positive.
+// The quotient of 10 divided by 3 is 3.
+// Summary
+// In this bit manipulation approach:
+
+// We doubled the divisor (3) as many times as possible without exceeding the current dividend (10).
+// We subtracted these largest multiples from the dividend and updated the result accordingly.
+// This method efficiently calculates the quotient by leveraging bit shifting to handle larger multiples quickly.
+// Output:
+
+// 10 / 3 = 3

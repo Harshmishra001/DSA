@@ -38,3 +38,20 @@ public static void main(String[] args) {
 
     
 
+// Test Case Walkthrough:
+
+// Test Case 1:
+
+// Input:
+
+// n = 18 (binary: 10010)
+// Steps:
+
+// Convert to binary string: "10010"
+// Traverse from right to left:
+// Position 1: 0
+// Position 2: 1 (first set bit found)
+// Return position 2.
+// Output:
+
+// The position of the first set bit is 2.
