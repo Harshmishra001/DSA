@@ -6,6 +6,8 @@ class OddEven {
             return "even";  // If the remainder is 0, the number is even.
         } else {
             return "odd";   // If the remainder is not 0, the number is odd.
+       
+        
         }
     }
 
