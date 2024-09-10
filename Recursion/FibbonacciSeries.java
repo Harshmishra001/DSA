@@ -38,7 +38,6 @@ public class FibbonacciSeries {
 //     Time Complexity: O(N).As we are iterating over just one for a loop.
 //     Space Complexity: O(1).
     public static void main(String args[]) {
-       
         int n = 5;
 
         if (n == 0)
