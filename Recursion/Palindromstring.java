@@ -1,5 +1,3 @@
-import java.sql.Time;
-
 /*Time Complexity: O(N) { Precisely, O(N/2) as we compare the elements N/2 times and swap them}.
 
 Space Complexity: O(1) { The elements of the given array are swapped in place so no extra space is required}.*/
