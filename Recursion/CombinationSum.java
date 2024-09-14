@@ -1,5 +1,16 @@
 import java.util.*;
-
+// Input:
+// N = 4
+// arr[] = {7,2,6,5}
+// B = 16
+// Output:
+// (2 2 2 2 2 2 2 2)
+// (2 2 2 2 2 6)
+// (2 2 2 5 5)
+// (2 2 5 7)
+// (2 2 6 6)
+// (2 7 7)
+// (5 5 6)
 class CombinationSum
 {
     // Function to return a list of indexes denoting the required 
