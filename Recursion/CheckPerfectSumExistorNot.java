@@ -9,12 +9,12 @@ public class CheckPerfectSumExistorNot {
 
     // Recursive helper function to find if a subsequence adds up to 'target'
     // 'sum' is the current sum of the subsequence, 'i' is the current index
-    public static boolean seq(int[] arr, int target, int sum, int i) {
+    public static boolean seq(int[] arr, int K, int sum, int i) {
         
         // Base case: If we have reached the end of the array
         if (i == arr.length) {
             // If the current sum equals the target, return true
-            if (sum == target) {
+            if (sum == K) {
                 return true;
             }
             // If not, return false
@@ -22,17 +22,17 @@ public class CheckPerfectSumExistorNot {
         }
 
         // If the sum has exceeded the target, no need to continue, return false
-        if (sum > target) {
+        if (sum > K) {
             return false;
         }
 
         // Recursive call: Try including the current element in the subsequence
-        if (seq(arr, target, sum + arr[i], i + 1)) {
+        if (seq(arr, K, sum + arr[i], i + 1)) {
             return true;
         }
 
         // Recursive call: Try excluding the current element from the subsequence
-        if (seq(arr, target, sum, i + 1)) {
+        if (seq(arr, K, sum, i + 1)) {
             return true;
         }
 
@@ -47,17 +47,12 @@ public class CheckPerfectSumExistorNot {
         // Example test case
         int arr[] = {1, 2, 3, 7};
         int N = arr.length;
-        int K = 10;  // We want to check if a subsequence sums to 10
+        int K = 10;  // We want to check if a subsequence sums to 10    
 
         // Call the checkSubsequenceSum function
         boolean result = solution.checkSubsequenceSum(N, arr, K);
 
-        // Print the result
-        if (result) {
-            System.out.println("There is a subsequence with sum " + K);
-        } else {
-            System.out.println("No subsequence with sum " + K);
-        }
+      System.out.println(result);
     }
 }
 
