@@ -1,5 +1,6 @@
 
 class McoloringGraph {
+    
     // Function to determine if the graph can be colored with at most M colors
     public boolean graphColoring(boolean[][] graph, int m, int n) {
         // Create an array to store colors assigned to each vertex (initialized to 0, meaning no color assigned)
