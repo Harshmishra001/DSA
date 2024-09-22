@@ -23,6 +23,7 @@ class McoloringGraph {
 
                 // Recursively attempt to assign colors to the remaining vertices
                 if (canColorGraph(graph, m, colors, vertex + 1, n)) {
+                    
                     return true; // If coloring the next vertices is successful, return true
                 }
 
