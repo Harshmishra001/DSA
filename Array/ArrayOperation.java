@@ -46,9 +46,41 @@ class ArrayOperation
         return -1;
 
     }
+     
+    // DELETE OPERATION
+      // Parameters:
+    // arr[]: The array from which the element will be deleted
+    // n: Current number of elements in the array
+    // x: Element to be deleted
+    static int deleteEle(int arr[], int n, int x)  
+    {
+  int i = 0;
+        // Step 1: Find the index of the element to be deleted
+        // Iterate over the array to find the element 'x'
+        for(i = 0; i < n; i++)  
+        {
+            if(arr[i] == x)  // If element 'x' is found, break the loop
+                break;
+        }
 
+        // Step 2: If the element is not found, return the current size
+        if(i == n)  
+            return n;
+
+        // Step 3: Shift the elements to the left, starting from the position
+        // where the element was found (i) till the end of the array.
+        for(int j = i; j < n - 1; j++)  
+        {
+            arr[j] = arr[j + 1];  // Shift the element one position to the left
+        }
+
+        // Return the new size of the array (after one element has been deleted)
+        return n - 1;
+    }  
 
     
+
+
 
     public static void main(String args[])  
     {  
@@ -86,5 +118,26 @@ class ArrayOperation
 
         System.out.println();
         System.out.println("Element found at index: "+ search(arr,n,10));
+
+        System.out.println();
+        System.out.println("Before Deletion");
+        
+        for(int i=0; i < n; i++)
+        {
+                System.out.print(arr[i]+" ");
+        }
+ 
+        System.out.println();
+        
+ 
+        n = deleteEle(arr, n, x);
+ 
+        System.out.println("After Deletion");
+ 
+        for(int i=0; i < n; i++)
+        {
+                System.out.print(arr[i]+" ");
+        }
+       
     }  
 }
