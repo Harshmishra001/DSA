@@ -36,7 +36,7 @@ class ArrayOperation
     } 
 
     // SEARCH OPRERATION
-    
+
     static int search(int arr[],int n , int x){
         for(int i=0;i<n;i++){
             if(arr[i]==x){
@@ -47,6 +47,8 @@ class ArrayOperation
 
     }
 
+
+    
 
     public static void main(String args[])  
     {  
