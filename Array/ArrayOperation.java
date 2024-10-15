@@ -4,6 +4,8 @@ import java.lang.*;
 
 class ArrayOperation
 {  
+//  INSERT OPERATION
+
     // Method to insert an element into an array
     // Parameters:
     // arr[]: The array where the element will be inserted
@@ -32,6 +34,19 @@ class ArrayOperation
         // Return the new size of the array (as one element has been added)
         return n + 1;
     } 
+
+    // SEARCH OPRERATION
+    
+    static int search(int arr[],int n , int x){
+        for(int i=0;i<n;i++){
+            if(arr[i]==x){
+                return i;
+            }
+        }
+        return -1;
+
+    }
+
 
     public static void main(String args[])  
     {  
@@ -66,5 +81,8 @@ class ArrayOperation
         {
             System.out.print(arr[i]+" ");  // Output after insertion: 5 7 10 20
         } 
+
+        System.out.println();
+        System.out.println("Element found at index: "+ search(arr,n,10));
     }  
 }
