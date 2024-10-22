@@ -90,3 +90,47 @@ Dry Run:
 
 5. Output: "The maximum consecutive 1's are 3"
 */
+
+
+
+// QUESTION 2
+
+// Given a number N. Find the length of the longest consecutive 1s in its binary representation.
+
+// Example 1:
+
+// Input: N = 14
+// Output: 3
+// Explanation: 
+// Binary representation of 14 is 
+// 1110, in which 111 is the longest 
+// consecutive set bits of length is 3.
+// Example 2:
+
+// Input: N = 222
+// Output: 4
+// Explanation: 
+// Binary representation of 222 is 
+// 11011110, in which 1111 is the 
+// longest consecutive set bits of length 4. 
+
+//User function Template for Java
+
+
+// class Solution {
+//     public static int maxConsecutiveOnes(int N) {
+        
+//         int count = 0;  // Initialize a counter to keep track of the maximum number of consecutive 1s
+        
+//         // Loop until N becomes 0
+//         while (N != 0) {
+//             // Perform bitwise AND operation between N and (N left-shifted by 1)
+//             // This operation removes the rightmost 1 from the sequence of consecutive 1s
+//             N = (N & (N << 1));
+//             count++;  // Increment the counter for each sequence of consecutive 1s found
+//         }
+        
+//         return count;  // Return the maximum count of consecutive 1s
+//     }
+// }
+
