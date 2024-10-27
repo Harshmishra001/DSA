@@ -135,57 +135,57 @@ import java.util.*;
 import java.util.*;
 
 public class MaximumSubarraySum {
+    // Method to find the maximum subarray sum and the subarray itself
     public static long maxSubarraySum(int[] arr, int n) {
+        long maxi = Long.MIN_VALUE; // Variable to hold the maximum sum found
+        long sum = 0; // Variable to keep track of the current subarray sum
 
-        long maxi = Long.MIN_VALUE; // maximum sum
-        long sum = 0;
+        int start = 0; // Starting index of the current subarray
+        int ansStart = -1, ansEnd = -1; // Variables to hold the start and end indices of the maximum subarray
 
-        int start = 0;
-        int ansStart = -1, ansEnd = -1;
-
+        // Iterate through the array
         for (int i = 0; i < n; i++) {
+            // If the current sum is zero, start a new subarray from index i
+            if (sum == 0) start = i;
 
-            if (sum == 0) start = i; // starting index
-
+            // Add the current element to the current sum
             sum += arr[i];
 
+            // Update maximum sum and record the indices if the current sum exceeds maxi
             if (sum > maxi) {
                 maxi = sum;
-
-                ansStart = start;
-                ansEnd = i;
+                ansStart = start; // Update the starting index of the maximum subarray
+                ansEnd = i; // Update the ending index of the maximum subarray
             }
 
-            // If sum < 0: discard the sum calculated
+            // If the current sum drops below zero, reset it
             if (sum < 0) {
-                sum = 0;
+                sum = 0; // Discard the current subarray and start fresh
             }
         }
 
-        //printing the subarray:
+        // Print the subarray that corresponds to the maximum sum
         System.out.print("The subarray is: [");
         for (int i = ansStart; i <= ansEnd; i++) {
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + " "); // Print each element in the subarray
         }
-        System.out.print("]n");
+        System.out.print("]"); // Close the subarray print
 
-        // To consider the sum of the empty subarray
-        // uncomment the following check:
+        // To consider the sum of the empty subarray, uncomment the following check:
+        // if (maxi < 0) maxi = 0; // Set maxi to 0 if all numbers are negative
 
-        //if (maxi < 0) maxi = 0;
-
-        return maxi;
+        return maxi; // Return the maximum sum found
     }
 
     public static void main(String args[]) {
+        // Example input array
         int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4};
-        int n = arr.length;
-        long maxSum = maxSubarraySum(arr, n);
-        System.out.println("The maximum subarray sum is: " + maxSum);
-
+        int n = arr.length; // Get the length of the array
+        long maxSum = maxSubarraySum(arr, n); // Call the maxSubarraySum method
+        System.out.println("The maximum subarray sum is: " + maxSum); // Print the result
     }
-
 }
+
 
 
 
