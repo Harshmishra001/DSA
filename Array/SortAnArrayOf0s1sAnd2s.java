@@ -126,7 +126,7 @@ public class SortAnArrayOf0s1sAnd2s{
         SortAnArrayOf0s1sAnd2s solution = new SortAnArrayOf0s1sAnd2s();
         int[] arr = {2, 0, 2, 1, 1, 0};
         solution.sort012(arr);
-
+        
         // Print the sorted array    coz void typ h saare function ka isliye vo s.o.p , solution.function name s ni chlega ese hi krna pdega
         System.out.print("Sorted array: ");
         for (int num : arr) {
