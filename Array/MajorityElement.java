@@ -114,7 +114,7 @@ public class MajorityElement {
         }
 
         // If the count of the candidate is greater than n/2, return it
-        if (cnt1 > (n / 2)) return el;
+        if (cnt1 > n / 2) return el;
         return -1; // Return -1 if no majority element exists
     }
 
