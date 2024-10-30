@@ -15,6 +15,7 @@ class LargestElement {
         // Check if array size is non-positive
         if (n <= 0) {
             return Integer.MIN_VALUE; // Return smallest possible value if array is empty or invalid
+            
         }
 
         int largestIndex = 0; // Start with the first element as the largest
