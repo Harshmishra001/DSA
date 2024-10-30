@@ -1,4 +1,20 @@
-// User function Template for Java
+// Given an array of integers arr[] representing a permutation, implement the next permutation that 
+// rearranges the numbers into the lexicographically next greater permutation. If no such permutation exists,
+//  rearrange the numbers into the lowest possible order (i.e., sorted in ascending order). 
+
+// Note - A permutation of n numbers is any possible arrangement of all the integers in range [1-n] where each integer occurs exactly once. 
+
+// Examples:
+
+// Input: arr = [1, 2, 3, 6, 5, 4]
+// Output: [1, 2, 4, 3, 5, 6]
+// Explanation: The next permutation of the given array is {1, 2, 4, 3, 5, 6}.
+// Input: arr = [3, 2, 1]
+// Output: [1, 2, 3]
+// Explanation: As arr[] is the last permutation, the next permutation is the lowest one.
+// Input: arr = [3, 4, 2, 5, 1]
+// Output: [3, 4, 5, 1, 2]
+// Explanation: The next permutation of the given array is {3, 4, 5, 1, 2}.
 
 
 
