@@ -47,7 +47,7 @@ class LeftrotateAnArrayByDtimes
     // Helper function to reverse the elements between indices low and high
     static void reverse(int arr[], int low, int high)
     {
-        while (low < high)
+        while (low <= high)
         {
             // Swap the elements at positions low and high
             int temp = arr[low];
