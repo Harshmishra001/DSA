@@ -102,7 +102,7 @@ public class MajorityElement {
             else {
                 cnt--;
             }
-        }
+        }//iss loop s ek majority element mil jayega fir usse verify krenge ki vhi h majority ya nhi
 
         // Checking if the stored element is indeed the majority element:
         int cnt1 = 0; // Counter to verify majority
