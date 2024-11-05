@@ -312,8 +312,6 @@ public class ThreeSum {
                     // Move both pointers to look for the next unique triplet
                     j++;
                     k--;
-                       
-                    while (j < k && arr[j] == arr[j - 1]) j++;:
 
                      // Ye check karta hai ki kya current value arr[j] pichle value arr[j - 1] ke barabar hai ya nahi.
                      // Agar barabar hai, toh j ko increment karte hain taaki next distinct value pe chale jaaye.
