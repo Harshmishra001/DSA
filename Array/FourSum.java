@@ -211,9 +211,148 @@ The quadruplets are:
 
 // OPTIMAL APPROACH
 
+import java.util.*;
+public class  FourSum {
+    // Function to find all unique quadruplets that sum up to the target.
+    public static List<List<Integer>> fourSum(int[] nums, int target) {
+        int n = nums.length; // Size of the array
+        List<List<Integer>> ans = new ArrayList<>();
 
+        // Sort the given array to handle duplicates easily and use two-pointer technique
+        Arrays.sort(nums);
 
+        // Iterate through the array to pick the first element of the quadruplet
+        for (int i = 0; i < n; i++) {
+            // Avoid duplicates for the first element
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
+            // Iterate through the array to pick the second element of the quadruplet
+            for (int j = i + 1; j < n; j++) {
+                // Avoid duplicates for the second element
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+
+                // Initialize two pointers for the third and fourth elements
+                int k = j + 1;
+                int l = n - 1;
+
+                // Use two-pointer technique to find the remaining two elements
+                while (k < l) {
+                    // Calculate the sum of the current quadruplet
+                    long sum = (long) nums[i] + nums[j] + nums[k] + nums[l];
+
+                    // If the sum matches the target, add the quadruplet to the result
+                    if (sum == target) {
+                        List<Integer> temp = new ArrayList<>();
+                        temp.add(nums[i]);
+                        temp.add(nums[j]);
+                        temp.add(nums[k]);
+                        temp.add(nums[l]);
+                        ans.add(temp);
+
+                        // Move pointers to the next distinct elements to avoid duplicates
+                        k++;
+                        l--;
+
+                        // Skip duplicates for the third element
+                        while (k < l && nums[k] == nums[k - 1]) k++;
+                        // Skip duplicates for the fourth element
+                        while (k < l && nums[l] == nums[l + 1]) l--;
+                    } else if (sum < target) {
+                        // Move the left pointer to increase the sum
+                        k++;
+                    } else {
+                        // Move the right pointer to decrease the sum
+                        l--;
+                    }
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {4, 3, 3, 4, 4, 2, 1, 2, 1, 1};
+        int target = 9;
+        List<List<Integer>> ans = fourSum(nums, target);
+
+        // Print the result
+        System.out.println("The quadruplets are: ");
+        for (List<Integer> it : ans) {
+            System.out.print("[");
+            for (int ele : it) {
+                System.out.print(ele + " ");
+            }
+            System.out.print("] ");
+        }
+        System.out.println();
+    }
+}
+
+// ### Dry Run
+
+// **Input:**
+// ```java
+// nums = {4, 3, 3, 4, 4, 2, 1, 2, 1, 1}
+// target = 9
+// ```
+
+// **Step-by-Step Execution:**
+
+// 1. **Initial Sorting:**
+//    ```java
+//    nums = {1, 1, 1, 2, 2, 3, 3, 4, 4, 4}
+//    ```
+
+// 2. **First iteration (i = 0, nums[i] = 1):**
+//    - **j = 1, nums[j] = 1**
+//      - k = 2, l = 9
+//        - sum = 1 + 1 + 1 + 4 = 7 (less than target)
+//        - Increment k → k = 3
+//        - sum = 1 + 1 + 2 + 4 = 8 (less than target)
+//        - Increment k → k = 4
+//        - sum = 1 + 1 + 2 + 4 = 8 (less than target)
+//        - Increment k → k = 5
+//        - sum = 1 + 1 + 3 + 4 = 9 (equal to target)
+//        - Found quadruplet: **[1, 1, 3, 4]**
+//        - Increment k → k = 6, decrement l → l = 8
+//        - Skip duplicate 3 and 4
+//    - **j = 2, nums[j] = 1 (duplicate, skip)**
+//    - **j = 3, nums[j] = 2**
+//      - k = 4, l = 9
+//        - sum = 1 + 2 + 2 + 4 = 9 (equal to target)
+//        - Found quadruplet: **[1, 2, 2, 4]**
+//        - Increment k → k = 5, decrement l → l = 8
+//        - Skip duplicate 4
+//    - **j = 4, nums[j] = 2 (duplicate, skip)**
+
+// 3. **Second iteration (i = 1, nums[i] = 1, duplicate, skip)**
+
+// 4. **Third iteration (i = 2, nums[i] = 1, duplicate, skip)**
+
+// 5. **Fourth iteration (i = 3, nums[i] = 2):**
+//    - **j = 4, nums[j] = 2 (duplicate, skip)**
+//    - **j = 5, nums[j] = 3**
+//      - k = 6, l = 9
+//        - sum = 2 + 3 + 3 + 4 = 12 (greater than target)
+//        - Decrement l → l = 8
+//        - sum = 2 + 3 + 3 + 4 = 12 (greater than target)
+//        - Decrement l → l = 7
+//        - sum = 2 + 3 + 3 + 4 = 12 (greater than target)
+//        - Decrement l → l = 6 (end of loop)
+
+// **Output:**
+// ```
+// The quadruplets are:
+// [1 1 3 4] [1 2 2 4]
+// ```
+
+// ### Complexity Analysis
+
+// - **Time Complexity:** \(O(n^3)\), as the outer two loops are \(O(n^2)\) and the two-pointer approach is \(O(n)\).
+// - **Space Complexity:** \(O(1)\) for the two-pointer approach, and \(O(m)\) for storing the result, where \(m\) is the number of unique quadruplets.
+
+// This code is efficient, avoids duplicates, and handles edge cases well.
 
 
 
