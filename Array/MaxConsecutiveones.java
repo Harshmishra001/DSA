@@ -35,7 +35,7 @@ public class MaxConsecutiveones {
             // Update the maximum value with the larger of the previous maximum or current count
             maxi = Math.max(maxi, cnt);
         }
-        
+  
         // Return the maximum count of consecutive 1's
         return maxi;
     }
