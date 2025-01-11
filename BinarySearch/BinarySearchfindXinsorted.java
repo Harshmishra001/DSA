@@ -11,7 +11,7 @@
 // *So the overall time complexity is O(logN), where N = size of the given array.
 
 
-package BinarySearch;
+// package BinarySearch;
 
 // import java.util.*;
 

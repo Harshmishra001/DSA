@@ -1,4 +1,4 @@
-package BinarySearch;
+
 
 // Time Complexity: O(logN), where N = size of the given array.
     // Reason: We are basically using the Binary Search algorithm.

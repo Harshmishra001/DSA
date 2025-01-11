@@ -1,4 +1,4 @@
-package BinarySearch;
+// package BinarySearch;
 // Example 1:
 // Input Format:
 //  N = 6, k = 4, arr[] = {0,3,4,7,10,9}

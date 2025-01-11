@@ -28,7 +28,7 @@
 
 // Space Complexity: O(1) as we are using no extra space.
 
-package BinarySearch;
+// package BinarySearch;
 
 // public class ImplementUpperBound {
 

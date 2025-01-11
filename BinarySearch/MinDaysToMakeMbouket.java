@@ -1,4 +1,4 @@
-package BinarySearch;
+// package BinarySearch;
 
 
 // Problem Statement: You are given 'N’ roses and you are also given an array 'arr'  where 'arr[i]'  denotes that the 'ith' rose will bloom on the 'arr[i]th' day.

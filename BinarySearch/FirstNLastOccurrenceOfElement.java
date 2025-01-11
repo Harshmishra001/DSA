@@ -17,7 +17,7 @@
 // Explanation: No occurrence of 4 in the array, so, output is [-1, -1]
 
 
-package BinarySearch;
+// package BinarySearch;
 
 
 

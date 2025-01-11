@@ -20,7 +20,7 @@
 //  Index 3 is the smallest index such that arr[3] >= x.
 
 
-package BinarySearch;
+// package BinarySearch;
 
 
 // * Brute Force Approach

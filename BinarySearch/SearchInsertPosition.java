@@ -24,7 +24,7 @@
     
     // Space Complexity: O(1) as we are using no extra space.import java.sql.Time;
 
-package BinarySearch;
+// package BinarySearch;
 
 public class SearchInsertPosition {
         public static int searchInsert(int [] arr, int x) {

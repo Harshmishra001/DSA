@@ -1,4 +1,4 @@
-package BinarySearch;
+// package BinarySearch;
 
 
 /*Problem Statement*: Given an array of length N. Peak element is defined as the element greater than both of its neighbors.
