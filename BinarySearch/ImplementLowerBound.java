@@ -104,7 +104,8 @@ public class ImplementLowerBound {
     public static int lowerBound(int[] arr, int n, int x) {
 
         int low = 0, high = n - 1;
-        int ans = n;
+
+        int ans = n;  // If no element >= x is found, we return 'n' (end of the array)
 
         while (low <= high) {
             int mid = (low + high) / 2;
