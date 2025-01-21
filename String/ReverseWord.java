@@ -13,6 +13,11 @@
 // Input: s=”This is decent”
 // Output: “decent is This”
 
+
+// Final Complexity:
+// Time Complexity (TC): O(n), where n is the length of the input string.
+// Space Complexity (SC): O(n), due to the space used by the ans and temp StringBuilder objects.
+
 public class ReverseWord {
 
     // Method to reverse a string (StringBuilder) in-place
