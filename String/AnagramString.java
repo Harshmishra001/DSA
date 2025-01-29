@@ -123,6 +123,7 @@ public class AnagramString {
         return true;
     }
 
+    
     public static void main(String[] args) {
         // Test cases for the isAnagram2 function
         String str1 = "listen";
