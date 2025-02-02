@@ -52,3 +52,96 @@ class ImplementAtoi {
         System.out.println("Input: \"" + testCase3 +"\" -> Output: " + result3);
     }
 }
+//**dry run**
+
+// The `atoi` method:
+// 1. Converts a string input into an integer.
+// 2. Handles cases with negative signs (`-`) at the start.
+// 3. Returns `-1` if the string contains invalid characters.
+
+// ---
+
+// ### **Test Case 1: "42"**
+
+// #### Input: `"42"`
+// #### Dry Run:
+
+// 1. **Initialization**: `num = 0`
+// 2. Iterate through the string `"42"`.
+//    - **First character**: `'4'`
+//      - It is a digit. Convert `'4'` to `4` using `(ch - '0')`.
+//      - Update `num = (0 * 10) + 4 = 4`.
+//    - **Second character**: `'2'`
+//      - It is a digit. Convert `'2'` to `2` using `(ch - '0')`.
+//      - Update `num = (4 * 10) + 2 = 42`.
+// 3. No invalid characters or `'-'` found. Return `num = 42`.
+
+// #### Output:
+// `42`
+
+// ---
+
+// ### **Test Case 2: "-123"**
+
+// #### Input: `"-123"`
+// #### Dry Run:
+
+// 1. **Initialization**: `num = 0`
+// 2. Iterate through the string `"-123"`.
+//    - **First character**: `'-'`
+//      - It is at index `0`. Skip it.
+//    - **Second character**: `'1'`
+//      - It is a digit. Convert `'1'` to `1`.
+//      - Update `num = (0 * 10) + 1 = 1`.
+//    - **Third character**: `'2'`
+//      - It is a digit. Convert `'2'` to `2`.
+//      - Update `num = (1 * 10) + 2 = 12`.
+//    - **Fourth character**: `'3'`
+//      - It is a digit. Convert `'3'` to `3`.
+//      - Update `num = (12 * 10) + 3 = 123`.
+// 3. Add a negative sign since the first character was `'-'`.
+//    - Return `-num = -123`.
+
+// #### Output:
+// `-123`
+
+// ---
+
+// ### **Test Case 3: "21a"**
+
+// #### Input: `"21a"`
+// #### Dry Run:
+
+// 1. **Initialization**: `num = 0`
+// 2. Iterate through the string `"21a"`.
+//    - **First character**: `'2'`
+//      - It is a digit. Convert `'2'` to `2`.
+//      - Update `num = (0 * 10) + 2 = 2`.
+//    - **Second character**: `'1'`
+//      - It is a digit. Convert `'1'` to `1`.
+//      - Update `num = (2 * 10) + 1 = 21`.
+//    - **Third character**: `'a'`
+//      - It is not a digit. Return `-1` (invalid input).
+
+// #### Output:
+// `-1`
+
+// ---
+
+// ### **Walkthrough of Outputs:**
+
+// For the given main method:
+// ```java
+// System.out.println("Input: \"" + testCase1 +"\" -> Output: " + result1);
+// System.out.println("Input: \"" + testCase2 +"\" -> Output: " + result2);
+// System.out.println("Input: \"" + testCase3 +"\" -> Output: " + result3);
+// ```
+
+// #### Final Outputs:
+// 1. Input: `"42"` -> Output: `42`
+// 2. Input: `"-123"` -> Output: `-123`
+// 3. Input: `"21a"` -> Output: `-1`
+
+// ---
+
+// Let me know if you need further clarifications or optimizations!
