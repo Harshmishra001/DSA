@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 class BetterString {
+    
     // Function to count distinct subsequences of a given string 's'
     public static int countDistinctSubsequences(String s) {
         int n = s.length();
