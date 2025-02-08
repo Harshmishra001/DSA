@@ -1,3 +1,6 @@
+
+// Optimal O(n) and O(1)
+
 class DeletionOfValue {
     static class Node {
         int data; // Data stored in the node
