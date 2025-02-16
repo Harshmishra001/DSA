@@ -35,6 +35,7 @@ class Sort012 {
                 twoTail = twoTail.next;
             }
             curr = curr.next;
+            
         }
 
         // Step 2: Connect the three lists
