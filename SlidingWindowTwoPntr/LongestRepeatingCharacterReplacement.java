@@ -20,7 +20,7 @@ public class LongestRepeatingCharacterReplacement {
 
         // Iterate with right pointer over the string
         for (int right = 0; right < s.length(); right++) {
-            char currChar = s.charAt(right); // Current character
+            char currChar = s.charAt(right); // Current character 
             freq[currChar - 'A']++; // Increase frequency count
 
             // Update maxFreq with the highest frequency character in the window
