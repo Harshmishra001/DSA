@@ -25,6 +25,7 @@ public class RemoveDuplicateDLL {
     static Node removeDuplicates(Node head) {
         if (head == null || head.next == null) return head;
 
+        
         Node p = head;
         while (p.next != null) {
             if (p.data == p.next.data) {

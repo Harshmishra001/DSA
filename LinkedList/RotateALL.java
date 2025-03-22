@@ -56,6 +56,7 @@ class RotateALL{
         System.out.println(head.num);
     }
 
+    
     public static void main(String args[]) {
         // Manually creating the linked list
         Node head = new Node(1);

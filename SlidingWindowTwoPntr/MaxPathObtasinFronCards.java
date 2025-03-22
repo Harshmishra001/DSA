@@ -2,6 +2,7 @@
 // **Space Complexity:** \(O(1)\) (only a few integer variables are used).
 
 package SlidingWindowTwoPntr;
+
 class MaxPathObtasinFronCards {
     // Method to find the maximum score by picking k cards from the start or end
     public int maxScore(int[] cardPoints, int k) {

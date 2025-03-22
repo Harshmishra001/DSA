@@ -61,6 +61,7 @@ public class KgrpReverseLinkedList {
                 }
                 break;
             }
+            
 
             Node nextNode = kThNode.next; // Store the next node after k-th node
             kThNode.next = null; // Break the link to isolate k nodes
