@@ -29,7 +29,7 @@ public class SubarraysWithKDistinctInt {
                 }
                 left++; // Move the left pointer forward
             }
-
+            
             count += (right - left + 1); // Count the subarrays ending at index 'right'
         }
         return count;

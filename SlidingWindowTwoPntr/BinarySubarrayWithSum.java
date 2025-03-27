@@ -14,6 +14,7 @@ class BinarySubarrayWithSum  {
         int count = 0, sum = 0;
         int start = 0, end = 0;
         
+        
         while (start < nums.length) {
             sum += nums[start]; // Expand the window by adding nums[start]
             
