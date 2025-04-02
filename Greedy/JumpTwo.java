@@ -63,3 +63,30 @@ class JumpTwo {
     }
 }
 
+// ### **Dry Run for Input:** `nums = {2, 3, 1, 1, 4}`  
+
+// 1. **Initialization:**  
+//    - `totalJumps = 0`, `destination = 4`, `coverage = 0`, `lastJumpIdx = 0`.
+
+// 2. **Iteration Begins:**  
+
+//    - **i = 0:**  
+//      - `nums[0] = 2`, so `coverage = max(0, 0 + 2) = 2`.  
+//      - Since `i == lastJumpIdx` (0 == 0), we jump:  
+//        - `lastJumpIdx = 2`, `totalJumps = 1`.  
+
+//    - **i = 1:**  
+//      - `nums[1] = 3`, so `coverage = max(2, 1 + 3) = 4`.  
+//      - No jump yet, since `i ≠ lastJumpIdx`.  
+
+//    - **i = 2:**  
+//      - `nums[2] = 1`, so `coverage = max(4, 2 + 1) = 4`.  
+//      - Since `i == lastJumpIdx` (2 == 2), we jump:  
+//        - `lastJumpIdx = 4`, `totalJumps = 2`.  
+//      - Now, `coverage >= destination` (4 >= 4), so we return `2`.  
+
+// ### **Final Output:**  
+// `Minimum jumps needed: 2` ✅  
+// _(Path: **0 → 1 → 4**)_
+
+// Let me know if you need more details! 🚀
