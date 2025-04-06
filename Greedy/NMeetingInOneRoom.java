@@ -9,14 +9,26 @@
 
 // Output: 1 2 4 5
 
+// Dry run:
 
+// Step 1: Create a list of meeting objects with start, end, and position.
+// Step 2: Sort the meetings based on their end times. If end times are equal, sort based on their positions.
+// Step 3: Initialize an ArrayList to store the order of meetings.
+// Step 4: Add the first meeting to the answer list.
+// Step 5: Set the limit to the end time of the first meeting.
+// Step 6: Iterate through the remaining meetings.
+//         If the start time of the current meeting is greater than the limit,
+//         it means the current meeting can be accommodated without overlapping with the previous meetings.
+//         Update the limit to the end time of the current meeting.
+//         Add the position of the current meeting to the answer list.
+// Step 7: Print the order in which the meetings will be performed.
 import java.util.*;
 
 class meeting {
     int start;
     int end;
     int pos;
-     
+
     meeting(int start, int end, int pos)
     {
         this.start = start;
@@ -45,16 +57,16 @@ class meetingComparator implements Comparator<meeting>{
 public class NMeetingInOneRoom{
     static void maxMeetings(int start[], int end[], int n) {
         ArrayList<meeting> meet = new ArrayList<>();
-        
+
         for(int i = 0; i < start.length; i++)
             meet.add(new meeting(start[i], end[i], i+1));
-        
+
         meetingComparator mc = new meetingComparator(); 
         Collections.sort(meet, mc); 
         ArrayList<Integer> answer = new ArrayList<>();
         answer.add(meet.get(0).pos);
         int limit = meet.get(0).end; 
-        
+
         for(int i = 1;i<start.length;i++) {
             if(meet.get(i).start > limit) {
                 limit = meet.get(i).end; 
@@ -72,6 +84,6 @@ public class NMeetingInOneRoom{
         int start[] = {1,3,0,5,8,5};
         int end[] = {2,4,5,7,9,9};
         maxMeetings(start,end,n);
-        
+
     }
 }
