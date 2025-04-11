@@ -30,7 +30,7 @@ public class InfixToPostfix {
             char c = exp.charAt(i);
             // If the character is an operand (letter or digit), add it to output
             if (Character.isLetterOrDigit(c)) {
-                result.append(c);
+                result.append(c);  
             }
             // If character is '(', push it to stack
             else if (c == '(') {
