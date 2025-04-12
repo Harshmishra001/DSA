@@ -8,7 +8,7 @@
 
 // This is an efficient two-stack implementation of a queue, where costly transfers happen only when needed. Let me know if you need any modifications! 🚀
 
-package StackQueue;
+
 
 import java.util.Stack;
 

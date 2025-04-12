@@ -1,4 +1,3 @@
-package StackQueue;
 
 // Time Complexity:
 // - push(): O(1) → Adds element at the top

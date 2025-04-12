@@ -1,4 +1,4 @@
-package StackQueue;
+
 
 // Time Complexity (TC)
 // enqueue(int value) → O(1) (Insertion at the rear takes constant time)

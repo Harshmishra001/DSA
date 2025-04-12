@@ -1,4 +1,4 @@
-package StackQueue;
+
 import java.util.Stack;
 // Time Complexity (TC):
 // - Each character is processed once (O(n)).

@@ -11,9 +11,7 @@
 // Space Complexity: O(N)
 
 
-package StackQueue;
 
-import java.sql.Time;
 
 public class ImplementStackUsingArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package StackQueue;
+
 // Time Complexity: O(1) for push(), pop(), top(), and getMin().
 // Space Complexity: O(N) in the worst case when all elements are in decreasing order.
 import java.util.Stack;
