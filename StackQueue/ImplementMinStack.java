@@ -8,6 +8,7 @@ public class ImplementMinStack {
   // Main stack to store elements
   Stack<Integer> stack;
   
+  
   // Auxiliary stack to track the minimum element at each step
   Stack<Integer> minStack;
 
